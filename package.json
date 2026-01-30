@@ -1,0 +1,41 @@
+{
+  "name": "deposit-router-hardhat",
+  "version": "1.0.0",
+  "description": "Hardhat deployment scripts for DepositRouter contracts",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.ts",
+    "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.ts --network sepolia",
+    "extract-abi": "tsx scripts/extract-abi.ts",
+    "encode-abi": "tsx scripts/encode-abi.ts",
+    "encode-abi:hex": "tsx scripts/encode-abi.ts hex",
+    "encode-constructor-args": "tsx scripts/encode-constructor-args.ts",
+    "encode-constructor-args:sepolia": "tsx scripts/encode-constructor-args.ts --network sepolia",
+    "check-deposit": "hardhat run scripts/check-deposit-prerequisites.ts",
+    "check-deposit:sepolia": "hardhat run scripts/check-deposit-prerequisites.ts --network sepolia",
+    "test-deposit": "hardhat run scripts/test-deposit.ts",
+    "test-deposit:sepolia": "hardhat run scripts/test-deposit.ts --network sepolia",
+    "verify": "hardhat run scripts/verify.ts",
+    "verify:sepolia": "hardhat run scripts/verify.ts --network sepolia",
+    "test": "hardhat test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "chai": "^4.3.10",
+    "dotenv": "^16.6.1",
+    "hardhat": "^2.22.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "or": "^0.2.0"
+  }
+}
